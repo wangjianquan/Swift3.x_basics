@@ -12,8 +12,11 @@ class LearnFunc: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-            
-            
+        
+        
+            /**
+              *** 函数的调用
+             */
             //1. 返回字符串
             let str = greet(name: "航班时间", day: "08:06")
             print("\(str)\n\n")
@@ -51,6 +54,13 @@ class LearnFunc: UIViewController {
             var n = 10
             var m = 23
             swapNum(n: &n, m: &m)
+        
+        
+            //9. 外部参数名
+            someFunction(externalParameterName: 10)
+            let joinStr = join(string: "l", toString: "o", withJoiner: "ve")
+           print(joinStr)
+        
         }
         
         
@@ -77,11 +87,13 @@ class LearnFunc: UIViewController {
             return (min, max,sum)
             
         }
-        
-        //MARK: -- 函数: 参数的个数是可变的 , 返回 Int
+   
+    
+    //MARK: -- 函数: 参数的个数是可变的 , 返回 Int
         //swift中函数的参数个数可以变化，它可以接受不确定数量的输入类型参数
         //它们必须具有相同的类型
         //我们可以通过在参数类型名后面加入（...）的方式来指示这是可变参数
+       //注意： 一个函数至多能有一个可变参数，而且它必须是参数表中最后的一个。这样做是为了避免函数调用时出现歧义。
         func sumOf(numbers: Int...) -> Int {
             var sum = 0
             for number in numbers {
@@ -151,7 +163,32 @@ class LearnFunc: UIViewController {
             m = temp
             print("指针传递后的结果 \(n) \(m) \n")
         }
-        
+    
+    
+    
+    //MARK: -- 外部参数名:
+         //有时候, 调用函数时, 给每个参数命名是非常有用的, 因为这些参数名可以指出各个参数的用途是什么,(即, 参数代表的意义)
+        //如果希望如此, 那就需要给每个参数除了局部参数名外再定义一个外部参数名. 外部参数名写在局部参数名之前, 用空格分隔
+        // 例:
+        func someFunction(externalParameterName localParameterName: Int)  {
+            print("外部参数名例子")
+        }
+
+    // 第一个参数有一个叫string的外部参数名和s1的局部参数名,
+        // 第二个参数有一个叫tostring的外部参数名和一个叫s2的局部参数名
+        // 第三个参数有一个叫withJoiner的外部参数名和一个叫joiner的局部参数名
+        func join(string s1: String, toString s2: String, withJoiner joiner: String) -> String {
+            return s1 + joiner + s2
+        }
+    
+    //MARK: -- 常量参数和变量参数
+       //函数的参数默认是常量.
+       //参数名前加关键字 var 来定义变量参数
+   
+   
+    
+    
+    
         
 
 }
