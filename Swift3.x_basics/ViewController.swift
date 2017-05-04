@@ -7,38 +7,48 @@
 //
 
 import UIKit
+/*
+ **
+// 1.在开发中优先使用常量,只有在需要修改时,在修改成var
+// 2.常量本质:保存的内存地址不可以修改,但是可以通过内存地址拿到对象,之后修改对象内部的属性
+   3.可以通过:option + 鼠标左键,查看一个标识符的类型
+   4.Swift中没有隐式转化,不会将整形自动转成浮点型
+ */
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         /*函数调用*/
         
-        //        ifelse(x: 20)//if..else.. 语句
-        //        ternaryOperator(a: 20, b: 10) //三目运算
+                ifelse(x: 20)//if..else.. 语句
+                ternaryOperator(a: 20, b: 10) //三目运算
         
         // 问号操作符的使用(各参数设置nil试探效果)
-        //        demo(x: 33, y: nil,name: "小柠檬")
+                demo(x: 33, y: nil,name: "小柠檬")
         
         //if let 和if var 连用语法的使用
-        //        ifletAndVar(age: 18, name: "小柠檬")
-        //        guardUsed(age: 18, name: "白小黑")
-        //        useSwitch(number: 2)
-        //        forLoop() //for循环
+                ifletAndVar(age: 18, name: "小柠檬")
+                guardUsed(age: 18, name: "白小黑")//guardlet的使用
+                useSwitch(number: 2) //switch语句的使用
+                forLoop() //for循环
         
         /*字符串使用*/
-        //        stringUsed(str: "白小黑 and小柠檬")
+                stringUsed(str: "白小黑 and小柠檬")
         
         /*数组的使用*/
-        //        useArray()
+                useArray()
         
         /*字典的使用*/
-        //        useDic()
+                useDic()
         
         
     }
     
     //MARK: -- if..else 语句
+    //1> if后面的()可以省略
+    //2> 判断句不再有非0即真.必须有明确的Bool值:true/false
     func ifelse(x: Int)  {
         if x > 5 {
             print("a>5")
@@ -132,6 +142,39 @@ class ViewController: UIViewController {
         default:
             print("其他")
         }
+  
+        // 3.switch可以判断浮点型
+        let a : Double = 3.14
+        switch a {
+        case 3.14:
+            print("π")
+        default:
+            print("非π")
+        }
+        // 4.switch可以判断字符串
+        let m = 20
+        let n = 30
+        let opration = "+"
+        
+        var esult = 0
+        
+        switch opration {
+        case "+":
+            esult = m + n
+        default:
+            print("非法操作符")
+        }
+        
+        // 5.switch可以判断区间
+        let score = 93
+        
+        switch score {
+        case 0..<60:
+            print("不及格")
+        default:
+            print("不合理的分数")
+        }
+        
     }
     
     
@@ -307,6 +350,12 @@ class ViewController: UIViewController {
         
         //定义的同时进行初始化
         var dic = ["name": "小🍋", "age" : 18] as [String: Any]
+        //使用isEmpty属性来快捷的检查字典的count属性是否等于0.
+        if dic.isEmpty {
+            print("The airports dictionary is empty.")
+        } else {
+            print("The airports dictionary is not empty.")
+        }
         
         //定义字典的数组
         let user = [

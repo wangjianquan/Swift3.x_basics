@@ -6,7 +6,13 @@
 //  Copyright © 2017年 WJQ. All rights reserved.
 //
 
+
+
 import UIKit
+
+/*
+ ** 在Swift中,默认同一个项目中(同一个命名空间下),所有类都是共享的,可以直接访问,不需要import 所有对象的属性 也可以访问到
+*/
 
 class LearnFunc: UIViewController {
 
@@ -180,6 +186,8 @@ class LearnFunc: UIViewController {
         func join(string s1: String, toString s2: String, withJoiner joiner: String) -> String {
             return s1 + joiner + s2
         }
+    
+  
     
     //MARK: -- 常量参数和变量参数
        //函数的参数默认是常量.
