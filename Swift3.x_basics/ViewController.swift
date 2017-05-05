@@ -44,6 +44,11 @@ class ViewController: UIViewController {
                 useDic()
         
         
+        
+        //
+        
+        print("\(Dog.propertyList())")
+        
     }
     
     //MARK: -- if..else 语句
@@ -405,6 +410,7 @@ class ViewController: UIViewController {
             dict4[key] = value
             print(dict4)
         }
+        print("\n")
     }
 
 }
