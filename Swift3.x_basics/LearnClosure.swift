@@ -50,9 +50,6 @@ class LearnClosure: UIViewController {
         print(b3(10))
         
        
-        let p = Person()
-        //注意: 赋值不是调用set方法,直接拿到属性给属性赋值
-        p.name = "nin"
         
     }
     

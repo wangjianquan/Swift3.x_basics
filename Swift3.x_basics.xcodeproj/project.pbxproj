@@ -18,6 +18,8 @@
 		7C7297151EB9CC9E00842EE5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7297141EB9CC9E00842EE5 /* Person.swift */; };
 		7C7297171EB9D16100842EE5 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7297161EB9D16100842EE5 /* Student.swift */; };
 		7C7297191EB9DAE700842EE5 /* Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7297181EB9DAE700842EE5 /* Apple.swift */; };
+		7CA63F9B1EBC20F000B7C4DB /* KVC_Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA63F9A1EBC20F000B7C4DB /* KVC_Person.swift */; };
+		7CA63F9D1EBC5B0A00B7C4DB /* Student_KVCPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA63F9C1EBC5B0A00B7C4DB /* Student_KVCPerson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		7C7297141EB9CC9E00842EE5 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		7C7297161EB9D16100842EE5 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		7C7297181EB9DAE700842EE5 /* Apple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apple.swift; sourceTree = "<group>"; };
+		7CA63F9A1EBC20F000B7C4DB /* KVC_Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVC_Person.swift; sourceTree = "<group>"; };
+		7CA63F9C1EBC5B0A00B7C4DB /* Student_KVCPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student_KVCPerson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 				7C7297141EB9CC9E00842EE5 /* Person.swift */,
 				7C7297161EB9D16100842EE5 /* Student.swift */,
 				7C7297181EB9DAE700842EE5 /* Apple.swift */,
+				7CA63F9A1EBC20F000B7C4DB /* KVC_Person.swift */,
+				7CA63F9C1EBC5B0A00B7C4DB /* Student_KVCPerson.swift */,
 				7C299DC31EB2E90300BA67F1 /* Main.storyboard */,
 				7C299DC61EB2E90300BA67F1 /* Assets.xcassets */,
 				7C299DC81EB2E90300BA67F1 /* LaunchScreen.storyboard */,
@@ -157,12 +163,14 @@
 			files = (
 				7C7297191EB9DAE700842EE5 /* Apple.swift in Sources */,
 				7C7297151EB9CC9E00842EE5 /* Person.swift in Sources */,
+				7CA63F9B1EBC20F000B7C4DB /* KVC_Person.swift in Sources */,
 				7C7297131EB86D6300842EE5 /* HttpTool.swift in Sources */,
 				7C7297111EB86CB200842EE5 /* LearnClosure.swift in Sources */,
 				7C299DC21EB2E90300BA67F1 /* ViewController.swift in Sources */,
 				7C299DC01EB2E90300BA67F1 /* AppDelegate.swift in Sources */,
 				7C7297171EB9D16100842EE5 /* Student.swift in Sources */,
 				7C299DD21EB2E92A00BA67F1 /* LearnFunc.swift in Sources */,
+				7CA63F9D1EBC5B0A00B7C4DB /* Student_KVCPerson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

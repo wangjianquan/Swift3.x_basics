@@ -4,7 +4,7 @@
 //
 //  Created by landixing on 2017/4/28.
 //  Copyright © 2017年 WJQ. All rights reserved.
-//
+//  函数及构造函数
 
 
 
@@ -66,6 +66,39 @@ class LearnFunc: UIViewController {
             someFunction(externalParameterName: 10)
             let joinStr = join(string: "l", toString: "o", withJoiner: "ve")
            print(joinStr)
+        
+        
+        
+        
+        
+        /**
+         *构造函数的基本使用
+         */
+        
+        //1. 基本构造函数
+        let p = Person()
+        //注意: 赋值不是调用set方法,直接拿到属性给属性赋值
+        p.name = "nin"
+        //2. 继承自Person的类
+        let stu = Student()
+        stu.name = "小明"
+        stu.number = "abv"
+        print("\(stu.name) \(stu.number) \n")
+        
+        
+        //3.  构造函数的重载与重写
+        let apple = Apple(name: "重载构造函数")
+        print("\(apple)\n")
+        
+        //4 .KVC 构造函数
+        //        let kvcPer = KVC_Person(dic: ["name":"小皮球" as AnyObject,"age":18 as AnyObject, "like":"you" as AnyObject])
+        //        print(kvcPer)
+        
+        let stu2 = Student_KVCPerson(dic: ["name":"小皮球" as AnyObject,"age":18 as AnyObject, "like":"you" as AnyObject ,"number":"123" as AnyObject])
+        print(stu2)
+
+        
+        
         
         }
         
