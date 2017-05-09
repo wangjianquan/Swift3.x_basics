@@ -10,7 +10,7 @@ import UIKit
 
 class HttpTool: NSObject {
 
-    //为测试循环应用
+    //为了测试循环引用创建的(可忽略)
     var callBack : (()->())?
     
 

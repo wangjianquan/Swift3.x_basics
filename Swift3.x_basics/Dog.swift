@@ -29,7 +29,6 @@ class Dog: NSObject {
 //            
 //            //3. 根据下标获取属性
 //            let pty = list?[i]
-//            
 //            //4. 获取'属性'的名称
 //            //let cName: UnsafePointer<Int8>?
 //            //Int8 : C语言字符串
@@ -37,7 +36,6 @@ class Dog: NSObject {
 //            
 //            //5. 转换String字符串
 //            let name = String(utf8String:cName!)
-//            
 //            print(name as Any)
 //            
 //        }
@@ -46,20 +44,17 @@ class Dog: NSObject {
         for i in 0..<Int(count) {
             
             //guardlet语法: 依次判断每一项是否有值,只要有一项为nil 就不会执行print(name)
+            //guardlet语法详见(ViewController.swift)的guardUsed函数
+            //避免 "!"强制解包带来的风险及判断逻辑
             guard let pty = list?[i], let cName = property_getName(pty),let name = String(utf8String:cName) else {
-                
-                print("条件不成立")
-
-                //继续遍历下一个
+                print("条件不成立时走该方法")
+                //继续遍历下一个 (原本为return ,此时为for循环遍历, 所以使用continue)
                 continue
             }
             print(name)
         }
-
         //释放C语言对象
         free(list)
         return []
     }
-    
-    
 }

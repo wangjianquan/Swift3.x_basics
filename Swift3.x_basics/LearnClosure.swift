@@ -63,10 +63,10 @@ class LearnClosure: UIViewController {
          */
         
         //方案1
-        weak var weakSelf = self
-        httpTool.loadRequest { 
-            weakSelf?.view.backgroundColor = UIColor.red
-        }
+//        weak var weakSelf = self
+//        httpTool.loadRequest { 
+//            weakSelf?.view.backgroundColor = UIColor.red
+//        }
         
         //方案二(建议使用)
         httpTool.loadRequest { [weak self] ()->()in
@@ -76,10 +76,10 @@ class LearnClosure: UIViewController {
         
         //方案3 
         //// unowned关键字相当于OC中的__unsafe_unretained,指向一个内存地址,不管该对象是否被销毁.依然指向该内存地址
-        httpTool.loadRequest { [unowned  self] () -> () in
-            
-            self.view.backgroundColor = UIColor.blue
-        }
+//        httpTool.loadRequest { [unowned  self] () -> () in
+//            
+//            self.view.backgroundColor = UIColor.blue
+//        }
     }
     
     
