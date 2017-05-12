@@ -96,6 +96,9 @@ class StructAndClass: UIViewController {
         //Swift 中字符串（String）,数组（Array）和字典（Dictionary）类型均以结构体的形式实现。这意味着String，Array，Dictionary类型数据被赋值给新的常量(或变量），或者被传入函数（或方法）中时，它们的值会发生拷贝行为（值传递方式）。
         //Objective-C中字符串（NSString）,数组（NSArray）和字典（NSDictionary）类型均以类的形式实现，这与Swfit中以值传递方式是不同的。NSString，NSArray，NSDictionary在发生赋值或者传入函数（或方法）时，不会发生值拷贝，而是传递已存在实例的引用。
         
+        
+        
+               
     }
     //结构体 (定义使用struct)
     struct Resolution {
@@ -109,5 +112,18 @@ class StructAndClass: UIViewController {
         var frameRate = 0.0
         var name: String?
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 }
