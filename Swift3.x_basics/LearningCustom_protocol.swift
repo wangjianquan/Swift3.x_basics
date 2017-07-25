@@ -7,7 +7,6 @@
 
 
 //扩展标准库/定义属于个人的协议的学习
-
 import Foundation
 import UIKit
 
@@ -19,15 +18,12 @@ protocol SomeProtocol {
     static func someTypeMethod(_ type: String)
     //3. 构造器方法
     init(someParameter: Int)
-
-
 }
 
 //定义Wjq类, 并遵守 'SomeProtocol' 协议
 //实现协议的类型除了 class 外，还可以是 struct 或 enum。
 /*-----实现协议的方式一 -----*/
 class Wjq: SomeProtocol{
-   
 
     //1.
     func f() {
@@ -43,9 +39,7 @@ class Wjq: SomeProtocol{
     //注意: 在符合协议的类中实现构造器，必须在构造器实现前加上 required 修饰符。使用 required 修饰符可以确保所有子类也必须提供此构造器实现，从而也能符合协议。 如果类已经被标记为 final，那么不需要在协议构造器的实现中使用 required 修饰符，因为 final 类不能有子类.
     required init(someParameter: Int) {
         //初始化
-        
     }
-    
 }
 
 /*-----实现协议的方式二 定义类, 通过 'extension(扩展)' 实现协议-----*/
@@ -86,16 +80,11 @@ extension MyProtocol{
     func foo()  {
         print(prop)
     }
-    
-    
     //在 'extension' 中添加 'MyProtocol' 协议中没有定义过的属性和方法
     var exceed: Double { return 23 }
     func isExceed() -> Bool {
         return prop > 30
     }
-    
-    
-
 }
 
 class MyClass: MyProtocol {
@@ -126,13 +115,8 @@ extension Collection where Iterator.Element: TextRepresentable{
     }
 }
 
-
-
-
-
-
 //------------------协议中可以定义可变方法-----------------//
-
+//Swift中的mutating关键字修饰方法是为了能在该方法中修改struct或者enum 的变量,所以如果你的协议里没写mutating的话, 别人如果用struct 或者enum来实现这个协议的话, 就不能在方法里面改变自己的变量了. 另外在使用class实现带有mutating的方法的协议时,具体实现的前面是不需要加mutating修饰的,因为class可以随意更改自己的成员变量. 在协议里用mutating,对于class的实现是完全透明, 可以当做不存在
 protocol Togglable {
     mutating func toggle()
 }
@@ -149,7 +133,6 @@ enum OnOffSwitch: Togglable {
         }
     }
 }
-
 
 
 
@@ -245,6 +228,41 @@ class Intermediary: RentHouserDelegate {
     
 }
 
+
+//for..in的实现原理
+//class ReverseIterator<T>: IteratorProtocol {
+//    typealias Element = T
+//    var array:[Element]
+//    var currentIndex = 0
+//    init(array:[Element]) {
+//        self.array = array
+//        currentIndex = array.count - 1
+//    }
+//    
+//     func next() -> Element? {
+//        if currentIndex<0 {
+//            return nil
+//        } else {
+//            let element = array[currentIndex]
+//            currentIndex -= 1
+//            return element
+//        }
+//    }
+//}
+//
+//struct ReverseSequence<T>: Sequence {
+//    var array:[T]
+//    init(array:[T]) {
+//        self.array = array
+//    }
+//    typealias Iterator = ReverseIterator<T>
+//    
+//    func makeIterator() -> ReverseIterator<T> {
+//        return ReverseIterator(array: self.array)
+//    }
+//    
+//    
+//}
 
 
 //检查协议一致性

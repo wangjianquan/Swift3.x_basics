@@ -24,6 +24,7 @@
 		7CA63F9B1EBC20F000B7C4DB /* KVC_Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA63F9A1EBC20F000B7C4DB /* KVC_Person.swift */; };
 		7CA63F9D1EBC5B0A00B7C4DB /* Student_KVCPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA63F9C1EBC5B0A00B7C4DB /* Student_KVCPerson.swift */; };
 		7CA63FA11EBC6E2B00B7C4DB /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA63FA01EBC6E2B00B7C4DB /* Dog.swift */; };
+		7CAE135F1F2712B7001AE5EC /* LearningGenerics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAE135E1F2712B7001AE5EC /* LearningGenerics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		7CA63F9A1EBC20F000B7C4DB /* KVC_Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVC_Person.swift; sourceTree = "<group>"; };
 		7CA63F9C1EBC5B0A00B7C4DB /* Student_KVCPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student_KVCPerson.swift; sourceTree = "<group>"; };
 		7CA63FA01EBC6E2B00B7C4DB /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		7CAE135E1F2712B7001AE5EC /* LearningGenerics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearningGenerics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				7C6E7C891EC16DC500AA6B51 /* StructAndClass.swift */,
 				7C6E7C8B1EC1B37C00AA6B51 /* PropertiesControll.swift */,
 				7C7DDDF61F0F8AA10075B267 /* LearningCustom_protocol.swift */,
+				7CAE135E1F2712B7001AE5EC /* LearningGenerics.swift */,
 				7C299DC31EB2E90300BA67F1 /* Main.storyboard */,
 				7C299DC61EB2E90300BA67F1 /* Assets.xcassets */,
 				7C299DC81EB2E90300BA67F1 /* LaunchScreen.storyboard */,
@@ -182,6 +185,7 @@
 				7C7297111EB86CB200842EE5 /* LearnClosure.swift in Sources */,
 				7C6E7C8A1EC16DC500AA6B51 /* StructAndClass.swift in Sources */,
 				7CA63FA11EBC6E2B00B7C4DB /* Dog.swift in Sources */,
+				7CAE135F1F2712B7001AE5EC /* LearningGenerics.swift in Sources */,
 				7C299DC21EB2E90300BA67F1 /* ViewController.swift in Sources */,
 				7C299DC01EB2E90300BA67F1 /* AppDelegate.swift in Sources */,
 				7C7297171EB9D16100842EE5 /* Student.swift in Sources */,
