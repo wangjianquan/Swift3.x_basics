@@ -59,7 +59,7 @@ class LearningGenerics: UIViewController {
         stackOfStrings.appended(item: "dos")
         stackOfStrings.appended(item: "tres")
         
-        var arrayOfStrings = ["uno", "dos", "tres"] //array类型的满足Container类型，参考上面的extension Array
+        let arrayOfStrings = ["uno", "dos", "tres"] //array类型的满足Container类型，参考上面的extension Array
         if allItemsMatch(stackOfStrings, arrayOfStrings) {
             print("All items match.")
         } else {  

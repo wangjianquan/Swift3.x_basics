@@ -160,12 +160,12 @@ class ViewController: UIViewController {
         let m = 20
         let n = 30
         let opration = "+"
-        
         var esult = 0
         
         switch opration {
         case "+":
             esult = m + n
+            print("\(esult)")
         default:
             print("非法操作符")
         }
@@ -212,7 +212,7 @@ class ViewController: UIViewController {
         }
         /*1.遍历*/
         //NSString 不支持遍历 String 支持
-        for c in str.characters {
+        for c in 0..<str.count {
             print(c)
         }
         
@@ -222,7 +222,7 @@ class ViewController: UIViewController {
         print("字节数量:\(str.lengthOfBytes(using: .utf8))")
         
         //2> 字符串长度返回字符个数
-        print("字符串长度:\(str.characters.count)")
+        print("字符串长度:\(str.count)")
         
         //3> 使用NSString中转
         // str as NSString
@@ -252,11 +252,10 @@ class ViewController: UIViewController {
         
     }
     
-    
+            
     //MARK: -- 数组
     func useArray()  {
         //swift 中没有'@'
-        
         // 先定义,后初始化
         var mutableArr: [String]
         mutableArr = ["i","love"]

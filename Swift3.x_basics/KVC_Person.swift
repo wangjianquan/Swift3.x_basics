@@ -37,9 +37,7 @@ class KVC_Person: NSObject {
     
     //重载构造函数,使用字典为本类设置初始值
     init(dic:[String: AnyObject] ) {
-        
         super.init()// 保证对象已经初始化完成
-        
         // Use of 'self' in method call 'setValuesForKeys' before super.init initializes self
         //在调用 'setValuesForKeys', 之前,应先调用super.init()
         setValuesForKeys(dic)
