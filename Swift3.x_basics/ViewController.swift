@@ -147,7 +147,7 @@ class ViewController: UIViewController {
         default:
             print("其他")
         }
-  
+       
         // 3.switch可以判断浮点型
         let a : Double = 3.14
         switch a {
@@ -172,12 +172,22 @@ class ViewController: UIViewController {
         
         // 5.switch可以判断区间
         let score = 93
-        
         switch score {
         case 0..<60:
             print("不及格")
         default:
             print("不合理的分数")
+        }
+        
+        let sex = 0
+
+        switch sex {
+        case 0:
+            fallthrough //如果希望出现之前的case穿透,则可以使用关键字fallthrough
+        case 1:
+            print("正常人")
+        default:
+            print("其他")
         }
         
     }

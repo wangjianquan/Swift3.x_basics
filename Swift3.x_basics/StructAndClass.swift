@@ -12,6 +12,19 @@ import UIKit
 
 class StructAndClass: UIViewController {
 
+    //结构体 (定义使用struct) 值类型
+    struct Resolution {
+        var width = 0
+        var height = 0
+    }
+    //类 (关键字 class) 引用类型
+    class VideoMode {
+        var resolution = Resolution()
+        var interlaced = false
+        var frameRate = 0.0
+        var name: String?
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -99,18 +112,6 @@ class StructAndClass: UIViewController {
         
         
                
-    }
-    //结构体 (定义使用struct)
-    struct Resolution {
-        var width = 0
-        var height = 0
-    }
-    //类 (关键字 class)
-    class VideoMode {
-        var resolution = Resolution()
-        var interlaced = false
-        var frameRate = 0.0
-        var name: String?
     }
     
     

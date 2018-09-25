@@ -13,6 +13,7 @@ class LearningGenerics: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //1.非泛型
         var a = 1
         var b = 2
@@ -23,9 +24,10 @@ class LearningGenerics: UIViewController {
         var one = 3
         var two = 4
         swapTwoValue(a: &one, b: &two)
+        
+        
         var oneStr = "hello"
         var twoStr = "world"
-        
         swapTwoValue(a: &oneStr, b: &twoStr)
         print("oneStr:\(oneStr),twoStr:\(twoStr)")// oneStr:world,twoStr:hello
         
@@ -41,7 +43,7 @@ class LearningGenerics: UIViewController {
         stack.push("tres")
         stack.push("cuatro")
         
-//        print(stack.pop()) // cuatro
+        print(stack.pop("dos")) // cuatro
         
     
         
@@ -83,7 +85,7 @@ extension LearningGenerics {
     //对于这个例子，假如我们想交换两个Double类型、或者是其他类型的值，就需要针对每个类型写不同的方法，只是参数类型不同。为了解决这个问题，Swift提供了泛型，帮助我们来解决这个问题
     
     //MARK:泛型函数
-    //这个函数主体、功能跟上面的例子类似，用来交换两个同样类型的值，但是这个函数用 T 占位符来代替实际的类型。并没有指定具体的类型，但是传入的a ,b 必须是同一类型T。在调用这个函数的时候才能指定 T 是那种具体的类型。还有函数名后跟的那个 <T> 是函数定义的一个占位类型名，并不会查找T的具体类型
+    //这个函数主体、功能跟上面的例子类似，用来交换两个同样类型的值，但是这个函数用 T 占位符来代替实际的类型。并没有指定具体的类型，但是传入的a ,b 必须是同一类型T。在调用这个函数的时候才能指定 T 是那种具体的类型。还有函数名后跟的那个 <T> 是函数定义的一个占位类型名，并不会查找T的具体类型, T被称为类型参数
     func swapTwoValue<T>(a: inout T, b: inout T)  {
         let tempValue = a
         a = b
@@ -112,7 +114,7 @@ extension LearningGenerics {
     }
     
     //下面这是针对上面非泛型方法泛型版本的方法
-    /*在这个泛型例子中，不是所有的类型都可以 用 == 来比较的，所有必须指定泛型类型参数的约束为 Swift提供的 Equatable 协议,这表示T代表的类型必须是支持 Equatable 协议的。所有的Swift标准类型默认都是支持Equatable协议的.*/
+    /*在这个泛型例子中，不是所有的类型都可以用 == 来比较的，必须指定泛型类型参数的约束为 Swift提供的 Equatable 协议,这表示T代表的类型必须是支持 Equatable 协议的。所有的Swift标准类型默认都是支持Equatable协议的.*/
     func findIndex<T: Equatable>(_ array: [T], _ valueTofind:T) -> Int? {
         for (index, value) in array.enumerated() {
             if value == valueTofind {  //如果没指定 T：Equatable 这句话会编译不通过
@@ -121,8 +123,6 @@ extension LearningGenerics {
         }
         return nil
     }
-    
-    
     //MARK: -- Where子句
     //这个泛型函数在类型参数里面添加了where子句约束，C1,C2都必须是采纳Container协议的类型，并且C1、C2的泛型类型必须相同，而且C1的泛型类型必须是采纳Equatable的。
     func allItemsMatch<C1: Container,C2: Container>(_ someContainer: C1,_ anotherContainer: C2) -> Bool where C1.itemType == C2.itemType, C1.itemType: Equatable {
