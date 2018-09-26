@@ -44,3 +44,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+//全局函数
+//MARK: -- 自定义全局Log
+func Dlog<T>(_ message : T, file : String = #file, funcName : String = #function, lineNum : Int = #line) {
+    
+    #if DEBUG
+    // 1.获取打印所在的文件
+    let fileName = (file as NSString).lastPathComponent
+    
+    print("\(fileName):  (\(lineNum))-\(message)")
+    
+    #endif
+}
