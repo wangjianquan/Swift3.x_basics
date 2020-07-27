@@ -1,6 +1,6 @@
 //
 //  swift402.swift
-//  Swift3.x_basics
+//  Swift_basics
 //
 //  Created by landixing on 2018/9/26.
 //  Copyright © 2018 WJQ. All rights reserved.
@@ -28,12 +28,12 @@ class swift402: UIViewController {
         //MARK: -- 3. 索引
         let a: [Int] = [20, 30, 10, 40, 20, 30, 10, 40, 20]
         Dlog("数组a中大于 25的第一个元素的值 : \(a.first(where: { $0 > 25 })!)") // 数组a中大于 25的第一个元素的值
-        Dlog("数组a中大于 15的元素的索引 : \(a.index(where: { $0 > 15 })!)") // 数组a中大于 15的元素的索引
-        Dlog("数组a中等于 10的元素的索引 : \(a.index(of: 10)!)") // 数组a中等于 10的元素的索引
+        Dlog("数组a中大于 15的元素的索引 : \(a.firstIndex(where: { $0 > 15 })!)") // 数组a中大于 15的元素的索引
+        Dlog("数组a中等于 10的元素的索引 : \(a.firstIndex(of: 10)!)") // 数组a中等于 10的元素的索引
         
         // 数组a中大于25的元素
         //Swift 4.1
-        Dlog((a.reversed().index(where: { $0 > 25 })?.base).map({ a.index(before: $0) })!)
+        Dlog((a.reversed().firstIndex(where: { $0 > 25 })?.base).map({ a.index(before: $0) })!)
         
         //sWIFT 4.2
         Dlog(a.last(where: {$0 > 25})!)
@@ -82,15 +82,19 @@ class swift402: UIViewController {
         
         
          //MARK: -- 7: Conditional conformance enhancements
-
+        
+        
         //MARK: -- 8: Removal of CountableRange and CountableClosedRange
         let integerRange: Range = 0..<5
         // We can map over a range of integers because it's a Collection
         let integerStrings = integerRange.map { String($0) }
         Dlog(integerStrings)
+        
         let floatRange: Range = 0.0..<5.0
         // But this is an error because a range of Doubles is not a Collection
-        //floatRange.map { String($0) } // error!
+//        floatRange.map { String($0) } // error!
+        
+        
         
         //MARK: -- 9: MemoryLayout.offset(of:)
         struct Point {

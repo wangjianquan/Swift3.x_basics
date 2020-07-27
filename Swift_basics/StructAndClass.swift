@@ -1,6 +1,6 @@
 //
 //  StructAndClass.swift
-//  Swift3.x_basics
+//  Swift_basics
 //
 //  Created by landixing on 2017/5/9.
 //  Copyright © 2017年 WJQ. All rights reserved.
