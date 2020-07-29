@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12CCC1A124D00FFC00F85D43 /* Learn_enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CCC1A024D00FFC00F85D43 /* Learn_enum.swift */; };
 		7C299DC01EB2E90300BA67F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C299DBF1EB2E90300BA67F1 /* AppDelegate.swift */; };
 		7C299DC21EB2E90300BA67F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C299DC11EB2E90300BA67F1 /* ViewController.swift */; };
 		7C299DC51EB2E90300BA67F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C299DC31EB2E90300BA67F1 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12CCC1A024D00FFC00F85D43 /* Learn_enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn_enum.swift; sourceTree = "<group>"; };
 		7C299DBC1EB2E90300BA67F1 /* Swift_basics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_basics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C299DBF1EB2E90300BA67F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C299DC11EB2E90300BA67F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				7CA63F9A1EBC20F000B7C4DB /* KVC_Person.swift */,
 				7CA63F9C1EBC5B0A00B7C4DB /* Student_KVCPerson.swift */,
 				7C6E7C891EC16DC500AA6B51 /* StructAndClass.swift */,
+				12CCC1A024D00FFC00F85D43 /* Learn_enum.swift */,
 				7C6E7C8B1EC1B37C00AA6B51 /* PropertiesControll.swift */,
 				7C7DDDF61F0F8AA10075B267 /* LearningCustom_protocol.swift */,
 				7C8B7FE9215B35C400016EEA /* swift402.swift */,
@@ -199,6 +202,7 @@
 				7C8B7FEA215B35C400016EEA /* swift402.swift in Sources */,
 				7C6E7C8A1EC16DC500AA6B51 /* StructAndClass.swift in Sources */,
 				7CA63FA11EBC6E2B00B7C4DB /* Dog.swift in Sources */,
+				12CCC1A124D00FFC00F85D43 /* Learn_enum.swift in Sources */,
 				7C299DC21EB2E90300BA67F1 /* ViewController.swift in Sources */,
 				7C299DC01EB2E90300BA67F1 /* AppDelegate.swift in Sources */,
 				7C7297171EB9D16100842EE5 /* Student.swift in Sources */,

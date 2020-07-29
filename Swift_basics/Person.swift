@@ -26,7 +26,7 @@ class Person: NSObject {
     //调用父类的构造函数之前,属性self.name没有被初始化
     //*** 重写
     override init() {
-        name = "小🍋"
+        self.name = "小🍋"
     //4. Property 'self.name' not initialized at super.init call
     //调用父类的self.name的时候没有给self.name初始化--> 分配空间,设置初始值
          super.init()
